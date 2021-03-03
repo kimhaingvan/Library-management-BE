@@ -16,7 +16,7 @@ public class Supplier {
     @Column(unique = true)
     private Integer id;
 
-    @OneToMany(mappedBy = "supplier")
+    @OneToMany( mappedBy = "supplier")
     private Set<Product> productList;
 
     @Column(name = "delete_at")

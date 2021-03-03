@@ -20,7 +20,7 @@ public class Shop {
     @JoinColumn(name="account_id")
     private Account account;
 
-    @OneToMany(mappedBy = "shop")
+    @OneToMany( mappedBy = "shop")
     private Set<Product> productList;
 
     @OneToMany(mappedBy = "shop")

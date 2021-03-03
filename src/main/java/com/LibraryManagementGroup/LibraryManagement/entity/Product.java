@@ -42,7 +42,7 @@ public class Product {
             joinColumns = @JoinColumn(name = "product_id"),
             inverseJoinColumns = @JoinColumn(name = "tag_id")
     )
-    private List<Tag> tagList = new ArrayList<>();
+    private List<Tag> tags = new ArrayList<>();
 
     @Column(name = "product_name")
     private String productName;
