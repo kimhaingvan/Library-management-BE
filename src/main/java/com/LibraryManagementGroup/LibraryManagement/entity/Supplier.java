@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Setter
@@ -17,7 +18,7 @@ public class Supplier {
     private Integer id;
 
     @OneToMany( mappedBy = "supplier")
-    private Set<Product> productList;
+    private Set<Product> products= new HashSet<>();
 
     @Column(name = "delete_at")
     private String deteleAt;

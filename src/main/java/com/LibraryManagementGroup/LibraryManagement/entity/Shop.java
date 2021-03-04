@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Setter
@@ -21,10 +22,10 @@ public class Shop {
     private Account account;
 
     @OneToMany( mappedBy = "shop")
-    private Set<Product> productList;
+    private Set<Product> products = new HashSet<>();
 
     @OneToMany(mappedBy = "shop")
-    private Set<Supplier> supplierList;
+    private Set<Supplier> suppliers = new HashSet<>();
 
     @Column(name = "shop_name", unique = true)
     private String shopName;

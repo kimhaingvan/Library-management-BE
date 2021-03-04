@@ -46,7 +46,7 @@ public class ProductController {
     @PostMapping("/get-shop-products")
     public JSONObject getShopProducts(@RequestBody JSONObject req) {
         JSONObject res = new JSONObject();
-        List<Product> products = productService.getProductsByShopId(2);
+        List<Product> products = productService.getProductsByShopId(18);
         res.put("items", products);
         System.out.println(products);
         return res;
